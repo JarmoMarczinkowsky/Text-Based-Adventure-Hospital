@@ -6,8 +6,8 @@ import sys
 import random
 from turtle import color
 
-def scrollTxt(text, color):
-    print(colorDict[color], end="")
+def scrollTxt(text, textColor):
+    print(textColor, end="")
     for char in text:
        sys.stdout.write(char)
        sys.stdout.flush()
@@ -29,8 +29,6 @@ colorDict = {
 
 # print(colorDict["green"])
 
-scrollTxt("red text", "red")
-scrollTxt("white text", "white")
-scrollTxt("yellow text", "yellow")
-
-print(colorDict["white"])
+scrollTxt("red text", colorDict["red"])
+scrollTxt("white text", colorDict["white"])
+scrollTxt("yellow text", colorDict["yellow"])
