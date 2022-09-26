@@ -44,13 +44,13 @@ def introduction():
     scrollTxt("After looking around for a bit, I decided that I’m bored.")
 
 def firstChoice():
-    scrollTxt("What to do?")
-    scrollTxt("1. Read the rapport")
-    scrollTxt("2. Microwave a banana")
-    input("")
+    print("What to do?")
+    print("1. Read the rapport")
+    print("2. Microwave a banana")
+    boredomInput = input("")
 
 
 
 system("cls")
-introduction()
+# introduction()
 firstChoice()
