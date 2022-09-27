@@ -33,11 +33,11 @@ def scrollTxt(text):
     input("")
 
 def introduction():
-    scrollTxt("Dr Judy: “Dr Leskinen… Dr Leskinen!”")
+    scrollTxt("Dr Judy:\n“Dr Leskinen… Dr Leskinen!”")
     scrollTxt("I saw Judy sprinting through the hallway towards me.")
-    scrollTxt("Dr Leskinen: “Another request to watch one of your patients, Dr Judy?”")
+    scrollTxt("Dr Leskinen:\n“Another request to watch one of your patients, Dr Judy?”")
     scrollTxt("Dr Judy seems to be out of breath.")
-    scrollTxt("Dr Judy (panting): “Yes… I need to be in the ER as soon as possible … could you check up on patient Alexis?")
+    scrollTxt("Dr Judy (panting):\n“Yes… I need to be in the ER as soon as possible … could you check up on patient Alexis?")
     scrollTxt("He is in room FG-8, here is his report.”")
     scrollTxt("She pushes the papers in my hands before I could answer and sprints off to the emergency room.")
     scrollTxt(f"I stood there, baffled.  ‘Just another {nowTime.strftime('%A')} in this hospital’, I thought. ")
@@ -70,16 +70,49 @@ def firstChoice():
         boredomInput = input("")
         if(choiceValidation(boredomInput) == False):
             runningFirstChoice = False
-        # if(boredomInput.isnumeric()):
-        #     if(int(boredomInput) < 3):
 
+
+def readRapport():
+    scrollTxt("I lean forward and grab the report I put on the table.")
+    scrollTxt("It’s a short and to the point report about patient Alexis.")
+    scrollTxt(f"""-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+Name: Alexis 
+Birthday: 13 – 8 – 1998
+Sex: Male
+
+Patient number: FE-40536
+Married: No
+Allergies: Peanuts
+ 
+Hospitalized since: {nowTime.strftime('%B')} {nowTime.strftime('%d')} 
+Reason for stay:
+Patient describes that he has ‘long dreams’. He claims that his dreams seem to get longer every time he sleeps. 
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+""")
+    scrollTxt("""Dr. Leskinen:
+“Long dreams, huh. Just because I’m a neurologist it doesn’t mean that I can fix every mental problem everyone has.”
+""")
+    scrollTxt("I looked at the clock, breaktime was almost over. ")
+    scrollTxt("‘Time for me to interview patient Alexis’, I thought.")
+
+# def microwaveBanana():
+#     scrollTxt("I’m so bored that I have decided to do a little science experiment. ")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
 
 system("cls")
 # introduction()
-firstChoice()
-print("Verder")
+# firstChoice()
 
-# if(boredomInput == 1):
-#     print("test1")
-# else:
-#     print("test2")
+if(boredomInput == "1"):
+    readRapport()
+elif(boredomInput == "2"):
+    print("Gelukt2")
