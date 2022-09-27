@@ -199,15 +199,46 @@ Alexis:
     scrollTxt("The dream always happens in that split-second he starts shaking.")
     scrollTxt("Puzzled, I went home.")
 
+def atHome():
+    scrollTxt("After I left the hospital, because my shift was over. I decided to make a quick stop at a fastfood restaurant before going home.")
+    scrollTxt("I was thinking about Alexis’ case while I was eating my burger.")
+    scrollTxt("‘It shouldn’t be possible’, I thought")
+    scrollTxt("I decided to check the internet for this case. The only thing close to my problem was a horror manga.")
+    scrollTxt("Defeated, I closed the laptop.")
+    scrollTxt("\n‘Let’s just unwind a bit before I go to sleep’\n")
+    scrollTxt("I turned the tv on and scrolled through Netflix.")
+    scrollTxt("There was nothing interesting so I started browsing on my phone.")
+    scrollTxt("After a while I noticed that the time went by quickly and it was almost time for bed.")
+    scrollTxt("Suddenly Netflix recommended me a movie that seemed interesting.")
+    scrollTxt("“Along with the Gods: the worlds between”")
+
+def movieChoice():
+    global movieInput
+    global runningMovie
+    runningMovie = True
+
+    print("What should I do?")
+    print("1. Watch a movie")
+    print("2. Go to bed early")
+    while runningMovie:
+        movieInput = input("")
+        if(choiceValidation(movieInput) == False):
+            runningMovie = False
+        
+    print("------------------")
+
+    
 #---------------------------------------------------------------------------------------------
 
 system("cls")
 # introduction()
-firstChoice()
+# firstChoice()
 
 # if(boredomInput == "1"):
 #     readRapport()
 # elif(boredomInput == "2"):
 #     microwaveBanana()
 
-talkWithPatient()
+# talkWithPatient()
+# atHome()
+movieChoice()
