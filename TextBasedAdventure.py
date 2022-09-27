@@ -10,6 +10,8 @@ from datetime import datetime, timedelta
 nowTime = datetime.today() - timedelta(days=3)
 # print(f"{nowTime.strftime('%B')} {nowTime.day}")
 
+
+
 #don't forget: 
 #change the '0;' to '1;' for bold text 
 colorDict = {
@@ -43,14 +45,41 @@ def introduction():
     scrollTxt("I walk towards the breakroom and sit down.")
     scrollTxt("After looking around for a bit, I decided that I’m bored.")
 
+#inputvalidation
+def choiceValidation(userChoice):
+    if(str(userChoice).isnumeric()):
+        if(int(userChoice) > 0 and int(userChoice) < 3):
+            return False
+        else:
+            print("Please enter 1 or 2")
+            return True
+    else:
+        print("Please enter a valid number:")
+        return True
+
 def firstChoice():
+    global boredomInput
+    global runningFirstChoice
+    runningFirstChoice = True
+
     print("What to do?")
     print("1. Read the rapport")
     print("2. Microwave a banana")
-    boredomInput = input("")
-
+    print("---------------------")
+    while runningFirstChoice:
+        boredomInput = input("")
+        if(choiceValidation(boredomInput) == False):
+            runningFirstChoice = False
+        # if(boredomInput.isnumeric()):
+        #     if(int(boredomInput) < 3):
 
 
 system("cls")
 # introduction()
 firstChoice()
+print("Verder")
+
+# if(boredomInput == 1):
+#     print("test1")
+# else:
+#     print("test2")
