@@ -241,6 +241,17 @@ def goToBed():
     scrollTxt("It could be dangerous for the patients if I’m tired during work.")
     scrollTxt("I went to bed and got a nice 8 hours of sleep.")
 
+def tiredPatient():
+    scrollTxt("It has been a few days since I first checked on Alexis. His condition worsens every day.")
+    scrollTxt("His dreams are now 2 years and he hasn’t slept in 2 days.")
+    scrollTxt("He is getting more irritated by the day. But I’m afraid every time he goes to sleep. Afraid that he will lose himself eventually.")
+    scrollTxt("\nAfter running the third bloodtest of this week, I still couldn’t find anything.")
+    scrollTxt("I decided to call it quits for now and stop the experiments for today.")
+    scrollTxt("""
+Patient Alexis:
+“I’m tired, I want to go to sleep.”
+""")
+
 #---------------------------------------------------------------------------------------------
 
 system("cls")
@@ -254,10 +265,12 @@ system("cls")
 
 # talkWithPatient()
 # atHome()
-movieChoice()
-if(movieInput == "1"):
-    watchMovie()
-else:
-    goToBed()
+# movieChoice()
+# if(movieInput == "1"):
+#     watchMovie()
+# else:
+#     goToBed()
+
+tiredPatient()
 
 
