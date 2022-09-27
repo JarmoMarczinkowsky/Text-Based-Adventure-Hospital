@@ -227,7 +227,20 @@ def movieChoice():
         
     print("------------------")
 
-    
+
+def watchMovie():
+    scrollTxt("I clicked on the movie and started watching it. It was a good movie. After 2 and a half hours, it was done.")
+    scrollTxt("I looked at the clock.")
+    scrollTxt("If I go to bed now, I will get around 5 and a half hours of sleep.")
+    scrollTxt("'Tomorrow is going to be tiresome', I thought.")
+    scrollTxt("I went to bed")
+
+def goToBed():
+    scrollTxt("I turned the tv off.")
+    scrollTxt("If I started watching this movie now, I could only get around 5 and a halve hours of sleep.")
+    scrollTxt("It could be dangerous for the patients if I’m tired during work.")
+    scrollTxt("I went to bed and got a nice 8 hours of sleep.")
+
 #---------------------------------------------------------------------------------------------
 
 system("cls")
@@ -242,3 +255,9 @@ system("cls")
 # talkWithPatient()
 # atHome()
 movieChoice()
+if(movieInput == "1"):
+    watchMovie()
+else:
+    goToBed()
+
+
