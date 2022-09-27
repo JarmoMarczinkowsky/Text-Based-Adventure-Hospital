@@ -252,6 +252,76 @@ Patient Alexis:
 “I’m tired, I want to go to sleep.”
 """)
 
+def sleepChoice():
+    global sleepInput
+    global runningSleep
+    runningSleep = True
+
+    print("What should I do?")
+    print("1. Let Alexis sleep")
+    print("2. Keep Alexis awake")
+    while runningSleep:
+        sleepInput = input("")
+        if(choiceValidation(sleepInput) == False):
+            runningSleep = False
+
+    print("--------------------")
+
+def neutralEnding():
+    scrollTxt("I scratched my head after I looked through the microscope for the third time this day.")
+    scrollTxt("A week has gone by and I barely got any further in my research on the disease. ")
+    scrollTxt("A few days after he had a MRI, I started noticing something weird in the data.")
+    scrollTxt("There were darkened spots around the amygdala and the hypothalamus. These are the parts of the brain responsible for fear and sleeping.")
+    scrollTxt("After discovering those weird spots, I arranged an emergency surgery, but I couldn’t believe my eyes what I found inside his skull.")
+    scrollTxt("It was like the parts of his brain were crystallized.")
+    scrollTxt("There are some very hard uneven parts on the ‘sick’ parts of his brain that a surgeon drill couldn’t pierce.")
+    scrollTxt("Eventually, I had to give up on the surgery and explain to him that the surgery couldn’t help him with his problem.")
+    scrollTxt("\nI kept scratching my head and tried figuring out different methods to help Alexis.")
+    scrollTxt("""I had already tried:
+•	Not letting him sleep,
+•	Putting him in an artificial coma to let him sleep, but not remember it,
+•	Making his day as bright as possible to stop the nightmares,
+•	Putting on some music while he fell asleep, classical music to be precise, 
+•	Learning him how to lucid dream to control his dreams.
+""")
+    scrollTxt("But nothing seemed to work. I’m currently at my wits end while Alexis seems to be suffering even more every day.")
+    scrollTxt("Last night, he had a dream that lasted fifty years.")
+    scrollTxt("In that dream, he was being chased by ‘a male in a red and green sweater with extremely long knife fingers’.")
+    scrollTxt("\nIt keeps getting more difficult for him to remember what the day before was.")
+    scrollTxt("Every time he wakes up, it’s like I’m talking to someone else.")
+    scrollTxt("Like he truly lives inside his dream for an entire lifetime.")
+    scrollTxt("He also started to look different. He no longer looks like someone of this world anymore.")
+    scrollTxt("At first the changes were small.")
+    scrollTxt("He looked like he got no sleep at all, nothing new in this department of the hospital, but after a while it got worse.")
+    scrollTxt("He got wrinkly all over his face, his veins have swollen beyond what they should be, his eyes have sunk deeply in his eye sockets. ")
+    scrollTxt("His hands look like he is over 90 years old.")
+    scrollTxt("I’m worried for his health.")
+    scrollTxt("\n-----------a month passes--------------")
+    scrollTxt("\nIt has been a month since the surgery. I had to give up on treating Alexis.")
+    scrollTxt("I couldn’t cure him or even pause his illness. I’m a failure of a doctor.")
+    scrollTxt("Two weeks after his surgery, I reported him to the government as a special case that needed more help.")
+    scrollTxt("He had been researched by the most professional doctors, but to no avail.")
+    scrollTxt("Three days ago, they gave the task of taking care of Alexis back to me, they also couldn’t help him.")
+    scrollTxt("During the time Alexis was being researched by the government, he was asked to record the number of years that have passed inside his dream.")
+    scrollTxt("On the last day of the research, he returned ’70 million years’.")
+    scrollTxt("He had a dream where his arm got wedged between a rock and a wall.")
+    scrollTxt("He was stuck in that position for the entirety of the dream.")
+    scrollTxt("He saw how to dinosaurs had been wiped out and how humanity had slowly evolved over span of 5 million years.")
+    scrollTxt("When he got to the industrial revolution, he woke up.")
+    scrollTxt("When he woke up, he looked nothing like he looked before.")
+    scrollTxt("His hair had partly fallen out of his head and his eyes were barely visible.")
+    scrollTxt("He screamed for an entire hour. After that, his energy was depleted and he simply gave up.")
+    scrollTxt("\nI’m afraid for Alexis.")
+    scrollTxt("Afraid that he will get an endless dream. A dream so long that he will never reach the end.")
+    scrollTxt("One where he sees how the universe is born and how it will end.")
+    scrollTxt("\nThe next morning, Alexis didn’t wake up.")
+    scrollTxt("I opened a window to get some fresh air for him, but he just crumbled. Almost like a waffle waiting for you to eat it.")
+    scrollTxt(". He slowly turned to ash and got spread through the room due to the wind blowing through the windows.")
+    scrollTxt("\nHe didn’t have to suffer on this earth anymore…")
+    print(colorDict["yellow"])
+    scrollTxt("\n[ending achieved: ‘The endless dream’]")
+    print(colorDict["white"])
+
 #---------------------------------------------------------------------------------------------
 
 system("cls")
@@ -271,6 +341,7 @@ system("cls")
 # else:
 #     goToBed()
 
-tiredPatient()
-
-
+# tiredPatient()
+sleepChoice()
+if(sleepInput == "1"):
+    neutralEnding()
