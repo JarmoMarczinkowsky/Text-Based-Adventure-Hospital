@@ -29,7 +29,7 @@ def scrollTxt(text):
     for char in text:
        sys.stdout.write(char)
        sys.stdout.flush()
-       time.sleep(0.015)
+       time.sleep(0.005)
     input("")
 
 def introduction():
@@ -267,6 +267,22 @@ def sleepChoice():
 
     print("--------------------")
 
+def panickedPatientChoice():
+    global panicInput
+    
+    runningPanic = True
+    
+    print("What should I do?")
+    print("1. Leave the room")
+    print("2. Calm the patient")
+    while runningPanic:
+        panicInput = input("")
+        if(choiceValidation(panicInput) == False):
+            runningPanic = False
+
+#endings
+#--------------------------------------------------------------------------------------------------------------
+
 def neutralEnding():
     scrollTxt("I scratched my head after I looked through the microscope for the third time this day.")
     scrollTxt("A week has gone by and I barely got any further in my research on the disease. ")
@@ -322,6 +338,120 @@ def neutralEnding():
     scrollTxt("\n[ending achieved: ‘The endless dream’]")
     print(colorDict["white"])
 
+def badEnding():
+    scrollTxt("""
+Dr. Leskinen:
+“I will make another coffee for you, so just stay awake for a little longer.”
+""")
+    scrollTxt("I walked out of the room before Alexis could reject the idea.")
+
+    if(movieInput == "1"):
+
+        scrollTxt("I scratched my beard before I noticed that I forgot my mask.")
+        scrollTxt("It must be because I was up late watching different Netflix series the last few days.")
+        scrollTxt("""
+Dr. Leskinen:
+"I sure hope that whatever Alexis has, it is something that is not transmissible by air"
+""")
+    scrollTxt("I was walking to the coffee machine when I saw Dr. Judy. ")
+    scrollTxt("I hadn’t seen her in days since she was the best doctor on the Emergency Room department.")
+    scrollTxt("While I was chatting up with her, I heard a bloodcurdling scream.")
+    scrollTxt("I saw a patient run through the hallways with a look like she had seen the grim reaper.")
+    scrollTxt("Behind her was Alexis. Trying to match her speed while dragging his left leg behind him.")
+    scrollTxt("He ran like an elderly man with a leg that looked like it hurt.")
+    scrollTxt("""
+Patient Alexis:
+“Please… someone… help me…”
+""")
+    scrollTxt("He sounded tired and sad at the same time.")
+    scrollTxt("\nI quickly ran after Alexis and after catching him I guided him back to his room.")
+    scrollTxt("""
+Dr. Leskinen (angry):
+“What do you think you are doing?!”
+""")
+    scrollTxt("""
+Patient Alexis:
+“I needed to get out of that room, doctor. In my last dream, I was trapped inside this room for over two years. 
+When I woke up, I couldn’t distinguish between my dream and reality. 
+But when you left the room, I panicked so much that I started running. 
+I entered the first open room that I found and in that was a girl that started screaming.”
+""")
+    scrollTxt("While Alex was getting more calmer in his room, I started looking for the girl that he chased.")
+    scrollTxt("After searching around for a bit, I found her in her own hospital room with Judy next to her.")
+    scrollTxt("Judy was trying to calm her down, but it didn’t seem to help much.")
+    scrollTxt("\nThe girl was screaming about having seen the god of death and that her time was near.")
+    scrollTxt("She meant Alexis of course, but I couldn’t get a word between her screaming and crying for help.")
+    scrollTxt("The girl, Asuka, had a heart disease which she couldn’t beat. She was suffering from something which would eventually result in her death.")
+    scrollTxt("Most likely within the next three months.")
+    scrollTxt("Since the moment of her diagnoses, she had been afraid to die.")
+    scrollTxt("She had begged more than every patient in the hospital for us to find a cure, but sadly we couldn’t help her.")
+    scrollTxt("After a while Asuka started to calm down. She was getting tired of all the screaming and hyperventilating. Then she fell asleep.")
+    scrollTxt("\n--------------------------------the next day--------------------------------\n")
+    scrollTxt("After I have had my morning coffee, Judy came running towards me. Still groggy from the pretty bad dream that I had tonight, I turned towards her.")
+    scrollTxt("""
+Dr. Leskinen:
+“Morning, Judy.”
+""")
+    scrollTxt("Dr Judy seemed to be out of breath. Seemed that the message she was about to deliver, was very urgent.")
+    scrollTxt("""
+Dr. Judy:
+“Could you come with me? I need to show you something.”
+""")
+    scrollTxt("Before I could answer, Dr. Judy grabbed my arm and pulled me to Asuka’s room.")
+    scrollTxt("It could be my imagination, but Judy seemed to be a bit tired today. She had darker spots beneath her eyes and seemed a bit more stressful than normal.")
+    scrollTxt("\nWhen we arrived at Asuka’s room, she was already sitting up straight in her bed.")
+    scrollTxt("""
+Dr. Judy:
+“Tell Dr. Leskinen what you just told me”.
+""")
+    scrollTxt("Asuka looked a bit shy. Like she didn’t want to answer the question.")
+    scrollTxt("After a few seconds she started explaining.")
+    scrollTxt("""
+Patient Asuka: 
+“Last night I had a dream that went on for a long time. It was a nightmare that seemed to span almost two days. 
+In that nightmare, I was floating in space. I was the only one left behind since my crewmates had ejected me. They were all going insane.
+I was floating in the emptiness of space. I couldn’t go forward or backward, to the left or right. 
+My only option was to float till my oxygen tank was depleted. It started to deplete very slowly. 
+And by the time my oxygen tank was empty, I woke up in the hospital.”
+""")
+    scrollTxt("I started frowning. It couldn’t be, right?\n")
+
+    if(movieInput == "1"):
+        scrollTxt("That Asuka got infected, because I forgot to wear my mask yesterday.")
+    else:
+        scrollTxt("That Asuka got infected due to Alexis getting near her?")
+
+    scrollTxt("If that was the case, it would mean that this virus would be airborne.")
+    scrollTxt("That would also mean that Judy and I accidentally infected the entire Emergency Room and the neurological department.")
+    scrollTxt("After calming down Alexis yesterday, I went to check on other patients.")
+    scrollTxt("When I just started connecting the dots, Judy also explained that she got a long dream.")
+    scrollTxt("We were already infected without noticing. I started thinking about how many colleagues I had talked to yesterday.")
+    scrollTxt("This hospital was already doomed. The only thing we could do now, was to put the entire hospital in quarantine.")
+    scrollTxt("\nI started notifying the rest of the hospital crew. No-one could go in or out this hospital.")
+    scrollTxt("The entire hospital had to be on lockdown.")
+    scrollTxt("After making sure that no-one could get in or out this hospital, I sat down. I had to find a cure or I would suffer a very bad faith.")
+    scrollTxt("One where I would get stuck in dreams for millions of years until I got a dream that would seem endless.")
+    scrollTxt("\n----------------------8 hours of lockdown----------------------\n")
+    scrollTxt("I started noticing that the hospital crew grew more restless.")
+    scrollTxt("The one with a nightshift couldn’t go home and sleep.")
+    scrollTxt("Since we only had a small canteen, the food was already eaten by some greedy colleagues.")
+    scrollTxt("Patients couldn’t let family visit them. And it started to annoy them to.")
+    scrollTxt("Some patients tried to exit their bed and run through the hallways before getting caught and put back in their bed.")
+    scrollTxt("\n----------------------- 20 hours of lockdown -------------------\n")
+    scrollTxt("After I went to the bathroom, I returned to an empty room where Alexis was supposed to be.")
+    scrollTxt("Alexis spend the entire day getting more impatient. By the end of the day, he hadn’t slept in a day and a half.")
+    scrollTxt("I panicked slightly. If he got out, he would infect the outside world.")
+    scrollTxt("I started searching for him with the entire hospital crew. But we found nothing of him.")
+    scrollTxt("He already looked like something that wasn’t human anymore, so he wouldn’t be hard to miss.")
+    scrollTxt("After searching for an hour, a colleague found something horrible:")
+    scrollTxt("The emergency exit was found left open. Alexis had escaped.")
+    scrollTxt("The entire world would soon be infected by his disease, there was no cure and nothing I could do at this point.")
+    scrollTxt("In the tempo that Alexis grew more ill by the day, it would mean that the entire world only had around 2 months before everyone couldn’t remember what this world meant to them…")
+    
+    print(colorDict["red"])
+    scrollTxt("\n[Ending unlocked: ‘Same as it ever was’]\n")
+    print(colorDict["white"])
+
 #---------------------------------------------------------------------------------------------
 
 system("cls")
@@ -342,6 +472,12 @@ system("cls")
 #     goToBed()
 
 # tiredPatient()
-sleepChoice()
-if(sleepInput == "1"):
-    neutralEnding()
+# sleepChoice()
+# if(sleepInput == "1"):
+#     neutralEnding()
+# else:
+#     scrollTxt("“No, Alexis, you can’t sleep for now. You need to be awake to avoid another dream.”")
+#     if(movieInput == "1"):
+#         badEnding()
+#     else:
+#         panickedPatientChoice()
