@@ -297,6 +297,18 @@ def calmPatientChoice():
 
     print("--------------------")
 
+def foodChoice():
+    global foodInput 
+
+    runningFood = True
+
+    print("What food should I give Alexis?")
+    print("1. Bread with peanut butter")
+    
+    if(boredomInput == "2"):
+        print("")
+        #rapport
+
 #endings
 #--------------------------------------------------------------------------------------------------------------
 
@@ -469,6 +481,63 @@ And by the time my oxygen tank was empty, I woke up in the hospital.”
     scrollTxt("\n[Ending unlocked: ‘Same as it ever was’]\n")
     print(colorDict["white"])
 
+def goodEnding():
+    scrollTxt("I ran to the breakroom to get some food for Alexis.")
+    scrollTxt("I saw some green slimy banana’s lying on the table. They seemed gross, so I skipped them.")
+    scrollTxt("I went to the cupboard and grabbed some bread and peanut butter. I prepared some bread with peanut butter for Alexis and returned to the room.")
+    scrollTxt("Alexis was in no shape to object, so I gave him the food. He ate it without questioning it.")
+    scrollTxt("After a few minutes Alexis began wheezing. Every second he seemed to breathe heavier than the one before.")
+    scrollTxt("""
+I started panicking. I grabbed his report and there it was: 
+•	Allergies: peanuts.
+""")
+    scrollTxt("I have accidentally triggered his allergic reaction.\n")
+    scrollTxt("Alexis started coughing. He was hyperventilating and couldn’t breathe properly anymore.")
+    scrollTxt("Before I could grab the oxygen mask, his heart monitor flatlined. ")
+    scrollTxt("He was death within seconds and it was all my mistake.")
+    scrollTxt("The defibrillator didn’t bring him back afterwards.")
+    scrollTxt("I just stood there dumbfounded.")
+    scrollTxt("Maybe this was the best for him.")
+    scrollTxt("There was no cure or treatment that could have helped him.")
+    scrollTxt("He would have gotten longer nightmares every night until he would get a nightmare that would be so long that it wouldn’t contain an ending. ")
+    
+    print(colorDict["green"])
+    scrollTxt("Good ending unlocked: [Eternal peace]")
+    print(colorDict["white"])
+
+# def jokeEnding():
+#     scrollTxt("I ran to the breakroom to get some food.")
+#     scrollTxt("I decided to grab the first thing edible thing I could see. It was the squishy green banana I microwaved a few days ago.")
+#     scrollTxt("‘Yuk’ I thought and put it on a plate before returning to Alexis Room.")
+#     scrollTxt("I gave him the plate with ‘food’ on it.")
+#     scrollTxt("While giving Alexis the plate, I noticed a peculiar smell coming from the hand that touched the banana.")
+#     scrollTxt("It smelled like a garbage left outside in 30° degrees weather. ")
+#     scrollTxt("I quickly went to wash my hands while I saw Alexis peeling what’s left of the banana.")
+#     scrollTxt("He was so tired that he almost seemed like an animatronic. His eyes were almost shut and he moved very slow.")
+#     scrollTxt("When I returned from washing my hands, the banana was already eaten by Alexis.")
+#     scrollTxt("He didn’t seem very different than normal.")
+#     scrollTxt("\n‘so be it’, I thought.")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+#     scrollTxt("")
+
 #---------------------------------------------------------------------------------------------
 
 system("cls")
@@ -489,7 +558,7 @@ system("cls")
 #     goToBed()
 
 # tiredPatient()
-sleepChoice()
+# sleepChoice()
 if(sleepInput == "1"):
     neutralEnding()
 else:
@@ -504,5 +573,16 @@ else:
             scrollTxt("\nI have decided to make sure the patient is calm first before he does something irrational.")  
             calmPatientChoice()
             if(calmPatientInput == "1"):
+                scrollTxt("I will need to give Alexis some food to let him calm down. Can’t think properly on an empty stomach.")
+                foodChoice()
+                if(boredomInput == "1"):
+                    goodEnding()
+                else:
+                    jokeEnding()
+            else:
+                scrollTxt("I grabbed some medicins to calm Alexis down and gave him a glass water to swallow his pills.")
+                scrollTxt("He seemed to calm rather quickly.\n")
+                neutralEnding()
+
                  
 
