@@ -279,6 +279,23 @@ def panickedPatientChoice():
         panicInput = input("")
         if(choiceValidation(panicInput) == False):
             runningPanic = False
+    
+    print("--------------------")
+
+def calmPatientChoice():
+    global calmPatientInput
+
+    runningCalmPatient = True
+
+    print("How should I calm Alexis?")
+    print("1. Food")
+    print("2. Medicines")
+    while runningCalmPatient:
+        calmPatientInput = input("")
+        if(choiceValidation(calmPatientInput) == False):
+            runningCalmPatient = False
+
+    print("--------------------")
 
 #endings
 #--------------------------------------------------------------------------------------------------------------
@@ -472,12 +489,20 @@ system("cls")
 #     goToBed()
 
 # tiredPatient()
-# sleepChoice()
-# if(sleepInput == "1"):
-#     neutralEnding()
-# else:
-#     scrollTxt("“No, Alexis, you can’t sleep for now. You need to be awake to avoid another dream.”")
-#     if(movieInput == "1"):
-#         badEnding()
-#     else:
-#         panickedPatientChoice()
+sleepChoice()
+if(sleepInput == "1"):
+    neutralEnding()
+else:
+    scrollTxt("“No, Alexis, you can’t sleep for now. You need to be awake to avoid another dream.”")
+    if(movieInput == "1"):
+        badEnding()
+    else:
+        panickedPatientChoice()
+        if(panicInput == "1"):
+            badEnding()
+        else:
+            scrollTxt("\nI have decided to make sure the patient is calm first before he does something irrational.")  
+            calmPatientChoice()
+            if(calmPatientInput == "1"):
+                 
+
