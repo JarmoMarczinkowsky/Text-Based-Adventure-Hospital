@@ -26,7 +26,7 @@ def scrollTxt(text):
     for char in text:
        sys.stdout.write(char)
        sys.stdout.flush()
-       time.sleep(0.005)
+       time.sleep(0.015)
     input("")
 
 def introduction():
