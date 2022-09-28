@@ -8,12 +8,9 @@ from turtle import color
 from datetime import datetime, timedelta
 
 threeDaysAgo = datetime.today() - timedelta(days=3)
-# print(f"{nowTime.strftime('%B')} {nowTime.day}")
 nowTime = datetime.now()
 
-
-#don't forget: 
-#change the '0;' to '1;' for bold text 
+#Colors that I could color the text with
 colorDict = {
     "black" : "\033[0;30m",
     "purple" : "\033[0;35m",
@@ -298,7 +295,6 @@ def calmPatientChoice():
     print("--------------------")
 
 
-
 #endings
 #--------------------------------------------------------------------------------------------------------------
 
@@ -540,6 +536,7 @@ So he will be in a time where they are medically more advanced than they are now
 
 #---------------------------------------------------------------------------------------------
 
+#order of the story
 system("cls")
 introduction()
 firstChoice()
@@ -561,19 +558,16 @@ tiredPatient()
 sleepChoice()
 if(sleepInput == "1"):
     neutralEnding()
-
 else:
     scrollTxt("“No, Alexis, you can’t sleep for now. You need to be awake to avoid another dream.”")
     
     if(movieInput == "1"):
         badEnding()
-    
     else:
         panickedPatientChoice()
-    
+        
         if(panicInput == "1"):
             badEnding()
-    
         else:
             scrollTxt("\nI have decided to make sure the patient is calm first before he does something irrational.")  
             calmPatientChoice()
@@ -583,10 +577,8 @@ else:
     
                 if(boredomInput == "1"):
                     goodEnding()
-    
                 else:
                     jokeEnding()
-    
             else:
                 scrollTxt("I grabbed some medicins to calm Alexis down and gave him a glass water to swallow his pills.")
                 scrollTxt("He seemed to calm rather quickly.\n")
