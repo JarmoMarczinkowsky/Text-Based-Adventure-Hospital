@@ -7,9 +7,9 @@ import random
 from turtle import color
 from datetime import datetime, timedelta
 
-nowTime = datetime.today() - timedelta(days=3)
+threeDaysAgo = datetime.today() - timedelta(days=3)
 # print(f"{nowTime.strftime('%B')} {nowTime.day}")
-
+nowTime = datetime.now()
 
 
 #don't forget: 
@@ -33,12 +33,12 @@ def scrollTxt(text):
     input("")
 
 def introduction():
-    scrollTxt("Dr Judy:\n“Dr Leskinen… Dr Leskinen!”")
+    scrollTxt("Dr Judy:\n“Dr Leskinen… Dr Leskinen!”\n")
     scrollTxt("I saw Judy sprinting through the hallway towards me.")
-    scrollTxt("Dr Leskinen:\n“Another request to watch one of your patients, Dr Judy?”")
+    scrollTxt("\nDr Leskinen:\n“Another request to watch one of your patients, Dr Judy?”\n")
     scrollTxt("Dr Judy seems to be out of breath.")
-    scrollTxt("Dr Judy (panting):\n“Yes… I need to be in the ER as soon as possible … could you check up on patient Alexis?")
-    scrollTxt("He is in room FG-8, here is his report.”")
+    scrollTxt("\nDr Judy (panting):\n“Yes… I need to be in the ER as soon as possible … could you check up on patient Alexis?\n")
+    scrollTxt("He is in room FG-8, here is his report.”\n")
     scrollTxt("She pushes the papers in my hands before I could answer and sprints off to the emergency room.")
     scrollTxt(f"I stood there, baffled.  ‘Just another {nowTime.strftime('%A')} in this hospital’, I thought. ")
     scrollTxt(f"I looked at my watch. It’s {nowTime.strftime('%H')}'o clock, time for my well deserved break.")
@@ -117,7 +117,7 @@ Dr. Leskinen:
     scrollTxt("The banana is gone. There are no traces of the banana nor the reason there was a flash left.")
     scrollTxt("I have decided to quickly leave this room.")
     scrollTxt("I walk past the table with the fruit bowl on it. There seems to be one green, slimy banana more than there was when I entered this room.")
-    scrollTxt("I quickly walk out of the room while thinking about the banana.")
+    scrollTxt("I quickly walk out of the room while thinking about the banana.\n")
 
 def talkWithPatient():
     scrollTxt("I walk through the hallways and quickly arrive at room FG-8.")
@@ -156,19 +156,19 @@ Dr. Leskinen:
 “Last night it felt like I got trapped inside my dream for half a year.”
 """)
     scrollTxt("""Dr. Leskinen: 
-“So every time you wake up it feels like your dream had lasted a while?”
+“So every time you wake up it feels like your dream has lasted a while?”
 """)
     scrollTxt("""Patient Alexis:
 “No doctor, It is inside the dream that I feel time drag on. 
-In the beginning I wasn’t sure, but with every passing day, the dreams grew longer”
-“It wouldn’t even be halve so bad if it isn’t a nightmare I am trapped inside of.”
-“Last night I was trapped in a never ending maze for a day. 
+In the beginning I wasn’t sure, but with every passing day, the dreams grew longer.
+It wouldn’t even be halve so bad if it isn’t a nightmare I am trapped inside of.
+Last night I was trapped in a never ending maze for a day. 
 The day before that I was trapped inside a dream where I was swimming in the middle of the ocean for a long time.”
 """)
     scrollTxt("I could barely keep myself under control. It took a lot of restraint to not grin at this absurd statement.")
     scrollTxt("""
 Patient Alexis: 
-“I can barely remember the day before, when I wake up. This has become a problem that impairs my daily life.”
+“I can barely remember the day before when I wake up. This has become a problem that impairs my daily life.”
 """)
     scrollTxt("I couldn’t believe him, I thought he was making fun of me. Or in the worst case scenario: has an underlying mental problem.")
     scrollTxt("I have decided to hook him up to a machine that graphs your brain activity when you sleep.")
@@ -195,14 +195,14 @@ Alexis:
 “I had a terrifying dream that lasted 200 days.” 
 """)
     scrollTxt("After this I experimented with him a few times more.")
-    scrollTxt("Every time he entered REM-sleep, he started shaking uncontrollably")
+    scrollTxt("Every time he entered REM-sleep, he started shaking uncontrollably.")
     scrollTxt("The dream always happens in that split-second he starts shaking.")
-    scrollTxt("Puzzled, I went home.")
+    scrollTxt("Puzzled, I went home.\n")
 
 def atHome():
-    scrollTxt("After I left the hospital, because my shift was over. I decided to make a quick stop at a fastfood restaurant before going home.")
+    scrollTxt("After that I left the hospital, because my shift was over. I decided to make a quick stop at a fastfood restaurant before going home.")
     scrollTxt("I was thinking about Alexis’ case while I was eating my burger.")
-    scrollTxt("‘It shouldn’t be possible’, I thought")
+    scrollTxt("‘It shouldn’t be possible’, I thought.")
     scrollTxt("I decided to check the internet for this case. The only thing close to my problem was a horror manga.")
     scrollTxt("Defeated, I closed the laptop.")
     scrollTxt("\n‘Let’s just unwind a bit before I go to sleep’\n")
@@ -233,13 +233,13 @@ def watchMovie():
     scrollTxt("I looked at the clock.")
     scrollTxt("If I go to bed now, I will get around 5 and a half hours of sleep.")
     scrollTxt("'Tomorrow is going to be tiresome', I thought.")
-    scrollTxt("I went to bed")
+    scrollTxt("I went to bed.\n")
 
 def goToBed():
     scrollTxt("I turned the tv off.")
     scrollTxt("If I started watching this movie now, I could only get around 5 and a halve hours of sleep.")
     scrollTxt("It could be dangerous for the patients if I’m tired during work.")
-    scrollTxt("I went to bed and got a nice 8 hours of sleep.")
+    scrollTxt("I went to bed and got a nice 8 hours of sleep.\n")
 
 def tiredPatient():
     scrollTxt("It has been a few days since I first checked on Alexis. His condition worsens every day.")
@@ -297,22 +297,13 @@ def calmPatientChoice():
 
     print("--------------------")
 
-def foodChoice():
-    global foodInput 
 
-    runningFood = True
-
-    print("What food should I give Alexis?")
-    print("1. Bread with peanut butter")
-    
-    if(boredomInput == "2"):
-        print("")
-        #rapport
 
 #endings
 #--------------------------------------------------------------------------------------------------------------
 
 def neutralEnding():
+    scrollTxt("--------------------------------------------")
     scrollTxt("I scratched my head after I looked through the microscope for the third time this day.")
     scrollTxt("A week has gone by and I barely got any further in my research on the disease. ")
     scrollTxt("A few days after he had a MRI, I started noticing something weird in the data.")
@@ -326,7 +317,7 @@ def neutralEnding():
 •	Not letting him sleep,
 •	Putting him in an artificial coma to let him sleep, but not remember it,
 •	Making his day as bright as possible to stop the nightmares,
-•	Putting on some music while he fell asleep, classical music to be precise, 
+•	Putting on some music while he fell asleep. Classical music to be precise, 
 •	Learning him how to lucid dream to control his dreams.
 """)
     scrollTxt("But nothing seemed to work. I’m currently at my wits end while Alexis seems to be suffering even more every day.")
@@ -351,8 +342,8 @@ def neutralEnding():
     scrollTxt("On the last day of the research, he returned ’70 million years’.")
     scrollTxt("He had a dream where his arm got wedged between a rock and a wall.")
     scrollTxt("He was stuck in that position for the entirety of the dream.")
-    scrollTxt("He saw how to dinosaurs had been wiped out and how humanity had slowly evolved over span of 5 million years.")
-    scrollTxt("When he got to the industrial revolution, he woke up.")
+    scrollTxt("He saw how to dinosaurs had been wiped out and how humanity had slowly evolved.")
+    scrollTxt("When he got to the industrial revolution, he woke up.\n")
     scrollTxt("When he woke up, he looked nothing like he looked before.")
     scrollTxt("His hair had partly fallen out of his head and his eyes were barely visible.")
     scrollTxt("He screamed for an entire hour. After that, his energy was depleted and he simply gave up.")
@@ -361,10 +352,10 @@ def neutralEnding():
     scrollTxt("One where he sees how the universe is born and how it will end.")
     scrollTxt("\nThe next morning, Alexis didn’t wake up.")
     scrollTxt("I opened a window to get some fresh air for him, but he just crumbled. Almost like a waffle waiting for you to eat it.")
-    scrollTxt(". He slowly turned to ash and got spread through the room due to the wind blowing through the windows.")
+    scrollTxt("He slowly turned to ash and got spread through the room due to the wind blowing through the windows.")
     scrollTxt("\nHe didn’t have to suffer on this earth anymore…")
     print(colorDict["yellow"])
-    scrollTxt("\n[ending achieved: ‘The endless dream’]")
+    scrollTxt("\n[ending achieved: ‘The endless dream’]\n")
     print(colorDict["white"])
 
 def badEnding():
@@ -377,10 +368,10 @@ Dr. Leskinen:
     if(movieInput == "1"):
 
         scrollTxt("I scratched my beard before I noticed that I forgot my mask.")
-        scrollTxt("It must be because I was up late watching different Netflix series the last few days.")
+        scrollTxt("It must be because I'm tired. I was up late watching different Netflix series the last few days.")
         scrollTxt("""
 Dr. Leskinen:
-"I sure hope that whatever Alexis has, it is something that is not transmissible by air"
+"I sure hope that whatever Alexis has, it is something that is not transmissible by air."
 """)
     scrollTxt("I was walking to the coffee machine when I saw Dr. Judy. ")
     scrollTxt("I hadn’t seen her in days since she was the best doctor on the Emergency Room department.")
@@ -398,8 +389,7 @@ Patient Alexis:
 Dr. Leskinen (angry):
 “What do you think you are doing?!”
 """)
-    scrollTxt("""
-Patient Alexis:
+    scrollTxt("""Patient Alexis:
 “I needed to get out of that room, doctor. In my last dream, I was trapped inside this room for over two years. 
 When I woke up, I couldn’t distinguish between my dream and reality. 
 But when you left the room, I panicked so much that I started running. 
@@ -571,24 +561,32 @@ tiredPatient()
 sleepChoice()
 if(sleepInput == "1"):
     neutralEnding()
+
 else:
     scrollTxt("“No, Alexis, you can’t sleep for now. You need to be awake to avoid another dream.”")
+    
     if(movieInput == "1"):
         badEnding()
+    
     else:
         panickedPatientChoice()
+    
         if(panicInput == "1"):
             badEnding()
+    
         else:
             scrollTxt("\nI have decided to make sure the patient is calm first before he does something irrational.")  
             calmPatientChoice()
+    
             if(calmPatientInput == "1"):
-                scrollTxt("I will need to give Alexis some food to let him calm down. Can’t think properly on an empty stomach.")
-                foodChoice()
+                scrollTxt("I will need to give Alexis some food to let him calm down. Can’t think properly on an empty stomach.")               
+    
                 if(boredomInput == "1"):
                     goodEnding()
+    
                 else:
                     jokeEnding()
+    
             else:
                 scrollTxt("I grabbed some medicins to calm Alexis down and gave him a glass water to swallow his pills.")
                 scrollTxt("He seemed to calm rather quickly.\n")
