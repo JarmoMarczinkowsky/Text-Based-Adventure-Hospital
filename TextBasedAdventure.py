@@ -505,60 +505,70 @@ I started panicking. I grabbed his report and there it was:
     scrollTxt("Good ending unlocked: [Eternal peace]")
     print(colorDict["white"])
 
-# def jokeEnding():
-#     scrollTxt("I ran to the breakroom to get some food.")
-#     scrollTxt("I decided to grab the first thing edible thing I could see. It was the squishy green banana I microwaved a few days ago.")
-#     scrollTxt("‘Yuk’ I thought and put it on a plate before returning to Alexis Room.")
-#     scrollTxt("I gave him the plate with ‘food’ on it.")
-#     scrollTxt("While giving Alexis the plate, I noticed a peculiar smell coming from the hand that touched the banana.")
-#     scrollTxt("It smelled like a garbage left outside in 30° degrees weather. ")
-#     scrollTxt("I quickly went to wash my hands while I saw Alexis peeling what’s left of the banana.")
-#     scrollTxt("He was so tired that he almost seemed like an animatronic. His eyes were almost shut and he moved very slow.")
-#     scrollTxt("When I returned from washing my hands, the banana was already eaten by Alexis.")
-#     scrollTxt("He didn’t seem very different than normal.")
-#     scrollTxt("\n‘so be it’, I thought.")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
-#     scrollTxt("")
+def jokeEnding():
+    scrollTxt("I ran to the breakroom to get some food.")
+    scrollTxt("I decided to grab the first thing edible thing I could see. It was the squishy green banana I microwaved a few days ago.")
+    scrollTxt("‘Yuk’ I thought and put it on a plate before returning to Alexis Room.")
+    scrollTxt("I gave him the plate with ‘food’ on it.")
+    scrollTxt("While giving Alexis the plate, I noticed a peculiar smell coming from the hand that touched the banana.")
+    scrollTxt("It smelled like a garbage left outside in 30° degrees weather. ")
+    scrollTxt("I quickly went to wash my hands while I saw Alexis peeling what’s left of the banana.")
+    scrollTxt("He was so tired that he almost seemed like an animatronic. His eyes were almost shut and he moved very slow.")
+    scrollTxt("When I returned from washing my hands, the banana was already eaten by Alexis.")
+    scrollTxt("He didn’t seem very different than normal.")
+    scrollTxt("\n‘so be it’, I thought.")
+    scrollTxt("\nI suddenly saw a flash through the windows and heard the sound of squeaking tires. ")
+    scrollTxt("I didn’t think much of it. Some kids will use the big empty parking space as a place to test their new vehicles. ")
+    scrollTxt("\nI went to report on some other patients when I heard someone running through the hallway.")
+    scrollTxt("I thought that it was Dr. Judy, but it was someone I hadn’t seen before.")
+    scrollTxt("He looked like a professor with the clothing he wore.")
+    scrollTxt("He also had fluffy hair, but I didn’t recognize him. So he didn’t work here.")
+    scrollTxt("He ran past me to Alexis' room. I walked back to Alexis room to see what he was going to do.")
+    scrollTxt("Visitor hours were already over for today.")
+    scrollTxt("When I entered the room, Alexis stood next to his bed leaning on the shoulder of the strange professor.")
+    scrollTxt("\nI politely asked the professor to put Alexis back on his bed and if he himself could return to the psych ward.")
+    scrollTxt("""
+The professor:
+“My name is Emmett Brown. I’ve come here from the future. 2050 to be precise. 
+In this future Alexis was patient zero of the disease that will destroy mankind. 
+I’m here to take him to a lab in the future. To study him and prevent / delay a global disaster. 
+If I take him now, he will be gone in this timeline for another 28 years. 
+So he will be in a time where they are medically more advanced than they are now.“
+""")
+    scrollTxt("I stood there dumbfounded. Not knowing what to do.")
+    scrollTxt("Will I let Alexis get kidnapped by someone from the psych ward or is he really a time traveler from the future?")
+    scrollTxt("For now I seemed to just stand there and see where this would go.")
+    scrollTxt("\nAlexis walked with the professor to the parking lot.")
+    scrollTxt("\nHe stepped into a, what seemed to be, modified Delorean. Emmett closed both the doors and turned on his vehicle.")
+    scrollTxt("He started speeding to the exit of the parking lot when there was a bright flash and some fire trails left where he had driven.")
+    scrollTxt("There were no signs of the Delorean crashing into a wall. He really was gone.")
+    scrollTxt("Alexis was really taken to the future.  A future where he would be studied and possible be helped.")
+    
+    print(colorDict["blue"])
+    scrollTxt("Ending unlocked: [Not my problem]")
+    print(colorDict["white"])
 
 #---------------------------------------------------------------------------------------------
 
 system("cls")
-# introduction()
-# firstChoice()
+introduction()
+firstChoice()
 
-# if(boredomInput == "1"):
-#     readRapport()
-# elif(boredomInput == "2"):
-#     microwaveBanana()
+if(boredomInput == "1"):
+    readRapport()
+elif(boredomInput == "2"):
+    microwaveBanana()
 
-# talkWithPatient()
-# atHome()
-# movieChoice()
-# if(movieInput == "1"):
-#     watchMovie()
-# else:
-#     goToBed()
+talkWithPatient()
+atHome()
+movieChoice()
+if(movieInput == "1"):
+    watchMovie()
+else:
+    goToBed()
 
-# tiredPatient()
-# sleepChoice()
+tiredPatient()
+sleepChoice()
 if(sleepInput == "1"):
     neutralEnding()
 else:
@@ -584,5 +594,4 @@ else:
                 scrollTxt("He seemed to calm rather quickly.\n")
                 neutralEnding()
 
-                 
 
